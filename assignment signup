@@ -1,0 +1,100 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Copy of guvi assignment python signup",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPABGMeNE5qlfs4rZ58cDms",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/iamismail471/cvvv/blob/master/assignment%20signup\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 200
+        },
+        "id": "3hYEwM8k0BR7",
+        "outputId": "5b8571d4-4f7c-4380-cff9-704aae14cf55"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-8-d4a2e7474fbb>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     29\u001b[0m         \u001b[0;32mreturn\u001b[0m \u001b[0;34m\"Name not found. Please Sign Up.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     30\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 31\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mchoices\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m: name 'choices' is not defined"
+          ]
+        }
+      ],
+      "source": [
+        "def getdetails():\n",
+        "    print(\"Please Provide\")\n",
+        "    name = str(input(\"Name: Ismail J \"))\n",
+        "    password = str(input(\"Password: Guvi \"))\n",
+        "    f = open(\"User_Data.txt\",'r')\n",
+        "    info = f.read()\n",
+        "    if name in info:\n",
+        "        return \"Name Unavailable. Please Try Again\"\n",
+        "    f.close()\n",
+        "    f = open(\"User_Data.txt\",'w')\n",
+        "    info = info + \"Ismail\" +name + \"Guvi \" + password\n",
+        "    f.write(info)\n",
+        "\n",
+        "def checkdetails():\n",
+        "    print(\"Please Provide\")\n",
+        "    name = str(input(\"Name: Ismail J \"))\n",
+        "    password = str(input(\"Password: Guvi \"))\n",
+        "    f = open(\"Ismail J\",'Guvi')\n",
+        "    info = f.read()\n",
+        "    info = info.split()\n",
+        "    if name in info:\n",
+        "        index = info.index(name) + 1\n",
+        "        usr_password = info[index]\n",
+        "        if usr_password == password:\n",
+        "            return \"Welcome Back, \" + name\n",
+        "        else:\n",
+        "            return \"Password entered is wrong\"\n",
+        "    else:\n",
+        "        return \"Name not found. Please Sign Up.\"\n",
+        "\n",
+        "print(choices())"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "CpL7OAZrT9fY"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
